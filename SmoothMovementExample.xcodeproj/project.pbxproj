@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7941946A1D882B6400F947A8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 794194691D882B6400F947A8 /* README.md */; };
 		79DEE14B1D878A7800F24468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE14A1D878A7800F24468 /* AppDelegate.swift */; };
 		79DEE14F1D878A7800F24468 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE14E1D878A7800F24468 /* GameScene.swift */; };
 		79DEE1511D878A7800F24468 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1501D878A7800F24468 /* GameViewController.swift */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		794194691D882B6400F947A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79DEE1471D878A7800F24468 /* SmoothMovementExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothMovementExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DEE14A1D878A7800F24468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79DEE14E1D878A7800F24468 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				79DEE1681D87902500F24468 /* Tile.swift */,
 				79DEE16A1D87903300F24468 /* VisualComponent.swift */,
 				79DEE16C1D87A6EE00F24468 /* Hero.swift */,
-				794194691D882B6400F947A8 /* README.md */,
 			);
 			path = SmoothMovementExample;
 			sourceTree = "<group>";
@@ -162,7 +159,6 @@
 			files = (
 				79DEE1651D878BE100F24468 /* Level.swift in Sources */,
 				79DEE14F1D878A7800F24468 /* GameScene.swift in Sources */,
-				7941946A1D882B6400F947A8 /* README.md in Sources */,
 				79DEE16D1D87A6EE00F24468 /* Hero.swift in Sources */,
 				79DEE1631D878AEA00F24468 /* Game.swift in Sources */,
 				79DEE1691D87902500F24468 /* Tile.swift in Sources */,
