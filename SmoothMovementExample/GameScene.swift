@@ -9,37 +9,49 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    // The previous update time is used to calculate the delta time. The delta time is used to
+    //  update the Game state.
+    private var lastUpdateTime: NSTimeInterval = 0
+
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-        
-        self.addChild(myLabel)
+        Game.sharedInstance.configureForScene(self)
     }
-    
+
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
+        // start move to destination
         for touch in touches {
             let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+            Game.sharedInstance.moveHeroToLocation(location)
         }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // update destination
+        for touch in touches {
+            let location = touch.locationInNode(self)
+            Game.sharedInstance.moveHeroToLocation(location)
+        }
+    }
+
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        // stop move
+        
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // stop move
     }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        // NOTE: After pausing the game, the last update time is reset to the current time. The
+        //  next time the update loop is entered, a correct delta time can then be calculated using
+        //  the current time and the last update time.
+        if lastUpdateTime <= 0 {
+            lastUpdateTime = currentTime
+        } else {
+            let deltaTime = currentTime - lastUpdateTime
+            lastUpdateTime = currentTime
+            Game.sharedInstance.updateWithDeltaTime(deltaTime)
+        }
     }
 }

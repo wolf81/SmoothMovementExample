@@ -7,25 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7941946A1D882B6400F947A8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 794194691D882B6400F947A8 /* README.md */; };
 		79DEE14B1D878A7800F24468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE14A1D878A7800F24468 /* AppDelegate.swift */; };
-		79DEE14D1D878A7800F24468 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 79DEE14C1D878A7800F24468 /* GameScene.sks */; };
 		79DEE14F1D878A7800F24468 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE14E1D878A7800F24468 /* GameScene.swift */; };
 		79DEE1511D878A7800F24468 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1501D878A7800F24468 /* GameViewController.swift */; };
 		79DEE1541D878A7800F24468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DEE1521D878A7800F24468 /* Main.storyboard */; };
 		79DEE1561D878A7800F24468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DEE1551D878A7800F24468 /* Assets.xcassets */; };
 		79DEE1591D878A7800F24468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DEE1571D878A7800F24468 /* LaunchScreen.storyboard */; };
+		79DEE1611D878A8E00F24468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1601D878A8E00F24468 /* Constants.swift */; };
+		79DEE1631D878AEA00F24468 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1621D878AEA00F24468 /* Game.swift */; };
+		79DEE1651D878BE100F24468 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1641D878BE100F24468 /* Level.swift */; };
+		79DEE1691D87902500F24468 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE1681D87902500F24468 /* Tile.swift */; };
+		79DEE16B1D87903300F24468 /* VisualComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE16A1D87903300F24468 /* VisualComponent.swift */; };
+		79DEE16D1D87A6EE00F24468 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE16C1D87A6EE00F24468 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		794194691D882B6400F947A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79DEE1471D878A7800F24468 /* SmoothMovementExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothMovementExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DEE14A1D878A7800F24468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79DEE14C1D878A7800F24468 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		79DEE14E1D878A7800F24468 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		79DEE1501D878A7800F24468 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		79DEE1531D878A7800F24468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79DEE1551D878A7800F24468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79DEE1581D878A7800F24468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79DEE15A1D878A7800F24468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DEE1601D878A8E00F24468 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		79DEE1621D878AEA00F24468 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		79DEE1641D878BE100F24468 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		79DEE1681D87902500F24468 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		79DEE16A1D87903300F24468 /* VisualComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualComponent.swift; sourceTree = "<group>"; };
+		79DEE16C1D87A6EE00F24468 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				79DEE14A1D878A7800F24468 /* AppDelegate.swift */,
-				79DEE14C1D878A7800F24468 /* GameScene.sks */,
 				79DEE14E1D878A7800F24468 /* GameScene.swift */,
 				79DEE1501D878A7800F24468 /* GameViewController.swift */,
 				79DEE1521D878A7800F24468 /* Main.storyboard */,
 				79DEE1551D878A7800F24468 /* Assets.xcassets */,
 				79DEE1571D878A7800F24468 /* LaunchScreen.storyboard */,
 				79DEE15A1D878A7800F24468 /* Info.plist */,
+				79DEE1601D878A8E00F24468 /* Constants.swift */,
+				79DEE1621D878AEA00F24468 /* Game.swift */,
+				79DEE1641D878BE100F24468 /* Level.swift */,
+				79DEE1681D87902500F24468 /* Tile.swift */,
+				79DEE16A1D87903300F24468 /* VisualComponent.swift */,
+				79DEE16C1D87A6EE00F24468 /* Hero.swift */,
+				794194691D882B6400F947A8 /* README.md */,
 			);
 			path = SmoothMovementExample;
 			sourceTree = "<group>";
@@ -102,6 +120,7 @@
 				TargetAttributes = {
 					79DEE1461D878A7800F24468 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Q97F9KZ3J6;
 					};
 				};
 			};
@@ -128,7 +147,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79DEE14D1D878A7800F24468 /* GameScene.sks in Resources */,
 				79DEE1591D878A7800F24468 /* LaunchScreen.storyboard in Resources */,
 				79DEE1561D878A7800F24468 /* Assets.xcassets in Resources */,
 				79DEE1541D878A7800F24468 /* Main.storyboard in Resources */,
@@ -142,9 +160,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DEE1651D878BE100F24468 /* Level.swift in Sources */,
 				79DEE14F1D878A7800F24468 /* GameScene.swift in Sources */,
+				7941946A1D882B6400F947A8 /* README.md in Sources */,
+				79DEE16D1D87A6EE00F24468 /* Hero.swift in Sources */,
+				79DEE1631D878AEA00F24468 /* Game.swift in Sources */,
+				79DEE1691D87902500F24468 /* Tile.swift in Sources */,
 				79DEE1511D878A7800F24468 /* GameViewController.swift in Sources */,
 				79DEE14B1D878A7800F24468 /* AppDelegate.swift in Sources */,
+				79DEE1611D878A8E00F24468 /* Constants.swift in Sources */,
+				79DEE16B1D87903300F24468 /* VisualComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmoothMovementExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.wolftrail.SmoothMovementExample;
+				PRODUCT_BUNDLE_IDENTIFIER = net.wolftrail.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -270,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SmoothMovementExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.wolftrail.SmoothMovementExample;
+				PRODUCT_BUNDLE_IDENTIFIER = net.wolftrail.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -296,6 +327,7 @@
 				79DEE15F1D878A7800F24468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
