@@ -10,9 +10,10 @@ import GameplayKit
 import SpriteKit
 
 class VisualComponent: GKComponent {
-    private(set) var sprite: SKSpriteNode
 
-    private(set) var isMoving = false
+    private(set) var sprite: SKSpriteNode
+    
+    private var isMoving = false
     
     var gridPosition: int2 {
         let position = CGPoint(x: CGFloat(sprite.position.x), y: CGFloat(sprite.position.y))
@@ -28,7 +29,9 @@ class VisualComponent: GKComponent {
         super.init()
     }
     
-    func moveToGridPosition(gridPosition: int2, completion block: () -> Void) {
+    // MARK: - Public
+    
+    func moveToGridPosition(gridPosition: int2) {
         if isMoving {
             return
         }
@@ -40,7 +43,6 @@ class VisualComponent: GKComponent {
         
         sprite.runAction(move) {
             self.isMoving = false            
-            block()
         }        
     }
 }

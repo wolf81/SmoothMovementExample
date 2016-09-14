@@ -9,30 +9,36 @@
 import SpriteKit
 import GameplayKit
 
+// The Game singleton is used for the main game logic. 
+
 class Game {
+    
     static let sharedInstance = Game()
+
+    private weak var scene: SKScene?
 
     private let level = Level()
     
+    // Entities
     private var tiles = [Tile]()
     private var hero: Hero!
-    
-    private weak var scene: SKScene?
     
     private init() {
         // Initializer hidden, since this is a singleton. Use sharedInstance() instead.
     }
     
+    // MARK: - Public
+    
+    // Load level into scene.
     func configureForScene(scene: SKScene) {
         self.scene = scene
 
         self.scene?.backgroundColor = SKColor.whiteColor()
-                
+        
         for gridY in (0 ..< level.vWuCount) {
             for gridX in (0 ..< level.hWuCount) {
                 let gridPos = int2(Int32(gridX), Int32(gridY))
                 let tileType = level.tileTypeAtGridPosition(gridPos)
-                
                 let pos = positionForGridPosition(gridPos)
                 let tile = Tile(forTileType: tileType, position: pos)
                 addEntity(tile)
@@ -46,8 +52,12 @@ class Game {
     
     func updateWithDeltaTime(seconds: CFTimeInterval) {
         // Update game systems, state, add and remove entities, etc... here.
+        
+        hero.updateWithDeltaTime(seconds)
     }
     
+    // Convert from a virtual gridPosition to a point in the scene. 
+    //  NOTE: perhaps it's more convenient to use Apple's GKGridGraph instead.
     func positionForGridPosition(gridPosition: int2) -> CGPoint {
         guard let scene = self.scene else {
             return CGPoint(x: -1, y: -1)
@@ -66,6 +76,8 @@ class Game {
         return CGPoint(x: Int(x), y: Int(y))
     }
     
+    // Convert a point in the scene into a virtual grid position.
+    //  NOTE: perhaps it's more convenient to use Apple's GKGridGraph instead.
     func gridPositionForPosition(position: CGPoint) -> int2 {
         guard let scene = self.scene else {
             return int2(-1, -1)
@@ -89,6 +101,7 @@ class Game {
         hero.moveToGridPosition(gridPos)
     }
     
+    // This method returns true if no Wall tile exists at the grid position.
     func canMoveToGridPosition(gridPosition: int2) -> Bool {
         return level.tileTypeAtGridPosition(gridPosition) == .None
     }

@@ -9,7 +9,8 @@
 import SpriteKit
 import GameplayKit
 
-class Tile: GKEntity {    
+class Tile: GKEntity {
+    
     private(set) var tileType: TileType
 
     init(forTileType tileType: TileType, position: CGPoint) {

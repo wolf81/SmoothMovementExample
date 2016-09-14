@@ -10,6 +10,7 @@ import GameplayKit
 import SpriteKit
 
 class Hero: GKEntity {
+    
     private(set) var toGridPosition: int2?
     
     var position: CGPoint {
@@ -30,24 +31,27 @@ class Hero: GKEntity {
         vc.sprite.zPosition = EntityLayer.Hero.rawValue
         addComponent(vc)
     }
-        
-    func moveToGridPosition(gridPosition: int2?) {
+    
+    // MARK: - Overrides
+    
+    override func updateWithDeltaTime(seconds: NSTimeInterval) {
         guard
             let vc = componentForClass(VisualComponent),
-            let toGridPosition = gridPosition else {
-            return
+            let toGridPosition = self.toGridPosition else {
+                return
         }
         
-        self.toGridPosition = toGridPosition
-        
         let heroPos = vc.gridPosition
-
+        
+        // Calculcate distance between hero position and destination in world units.
         let dx = toGridPosition.x - heroPos.x
         let dy = toGridPosition.y - heroPos.y
         
         if dx == 0 && dy == 0 {
-            self.toGridPosition = nil
+            // Stop movement if destination is already reached.
+            stopMove()
         } else {
+            // Move 1 world unit closer to destination point.
             var nextGridPosition = heroPos
             
             if dx > 0 {
@@ -61,16 +65,18 @@ class Hero: GKEntity {
             }
             
             if Game.sharedInstance.canMoveToGridPosition(nextGridPosition) {
-                vc.moveToGridPosition(nextGridPosition) {
-                    self.moveToGridPosition(self.toGridPosition)
-                }            
+                vc.moveToGridPosition(nextGridPosition)
             }
         }
     }
     
+    // MARK: - Public 
+    
+    func moveToGridPosition(gridPosition: int2?) {
+        self.toGridPosition = gridPosition
+    }
+    
     func stopMove() {
-        print("stop move")
-        
-        toGridPosition = nil
+        self.toGridPosition = nil
     }
 }

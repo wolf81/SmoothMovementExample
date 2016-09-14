@@ -8,20 +8,13 @@
 
 import SpriteKit
 
-enum Direction {
-    case Up
-    case Down
-    case Left
-    case Right
-    case None
-}
-
-// zPositions of entities
+// Z-positions of entities. 
 enum EntityLayer: CGFloat {
     case Tile = 1
     case Hero = 100
 }
 
+// For the example we have 2 tile types. No tile (floor) or wall. Walls block Hero movement.
 enum TileType: Int {
     case None = 0
     case Wall = 1

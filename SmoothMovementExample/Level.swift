@@ -9,11 +9,15 @@
 import SpriteKit
 
 class Level {
-    // The grid has a horizontal world unit count of 7, a vertical world unit count of 8.
+    
+    // PLEASE NOTE: Perhaps it's better to use GKGridGraph instead, but I haven't much experience
+    //  with this class yet, so I've resorted to a custom solution.
+    
+    // The grid has a horizontal world unit count of 7, a vertical world unit count of 8. 
     let hWuCount = 10
     let vWuCount = 10
-    
-    // The grid uses tile types as defined in the constants file. 
+
+    // The configuration for the level. The grid uses tile types as defined in the constants file.
     let grid = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
                 1, 0, 1, 0, 0, 0, 0, 0, 0, 1,
                 1, 0, 1, 0, 0, 0, 0, 0, 0, 1,
