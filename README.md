@@ -6,4 +6,4 @@ P.S. (1): in the Simulator movement might look choppy, but should be fine on a d
 
 P.S (2): this app is just a demo. Some things might not be implemented perfectly. Use as reference.
 
-[0]: http://gamedev.stackexchange.com/questions/129764/tile-based-movement-with-skaction-xcode-8-tile-map/129766#129766
+[0]: http://gamedev.stackexchange.com/q/129764/6736
